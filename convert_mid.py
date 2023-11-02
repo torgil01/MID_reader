@@ -1,11 +1,8 @@
 # the program read a mid .csv logfile and convert it to
 # a SPM design file
 
-
 import argparse
 import pandas as pd
-
-
 from datetime import datetime
 
 
@@ -20,12 +17,10 @@ def parse_csv(data):
     # time.trial
     # trial.should_nudge
     # trial.reward
-    # total_earnings
-    
+    # total_earnings    
 
     # remove rows with NA in trial.number column
     data = data.dropna(subset=["trial.number"], ignore_index=True)
-    print(data)
 
     # sort by trial.number
     data = data.sort_values(by=["trial.number"])
